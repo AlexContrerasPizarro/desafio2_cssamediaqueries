@@ -1,0 +1,261 @@
+body {
+    background-image: url("../imgs/background.jpg");
+}
+
+
+nav {
+    padding: 10px;
+    grid-area: menu;
+    color: white;
+    background-image: url("../imgs/background.jpg");
+    font-family: "Press Start 2P", cursive;
+
+
+}
+
+.navcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.navtitle {
+
+    font-size: 15px;
+
+}
+
+.navIconH {
+    color: whitesmoke;
+}
+
+
+.sidebarh1 {
+    font-size: 15px;
+}
+
+.sidebarp {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+/* --------------- */
+main {
+    grid-area: seccion-principal;
+    padding: 0%;
+
+}
+
+.mainItems {
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.mainFiltro {
+    text-align: center;
+    background-color: #000000;
+    width: 100%;
+    color: rgb(255, 255, 255);
+
+}
+
+.mainFiltro p {
+    margin-top: 0%;
+    padding: 10px;
+    margin-bottom: 0%;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #000000;
+}
+
+.mainFiltro select {
+    margin-bottom: 5px;
+
+}
+
+.mainSelect {
+    width: 95%;
+
+}
+
+
+
+.mainProductos {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+
+.mainCard {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 200px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+}
+
+.mainCard1 {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 200px;
+    font-weight: bold;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+
+}
+
+.mainImg {
+    width: 85%;
+}
+
+.mainp {
+    color: #1d202b;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.mainButton {
+    background-color: #171253;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+.paginationItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.pagination {
+    display: inline-block;
+    padding: 10px;
+
+}
+
+.pagination a {
+    color: rgb(255, 255, 255);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #000000;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+
+/* --------------- */
+footer {
+
+    grid-area: pie-de-pagina;
+    color: white;
+    padding: 10px;
+    background-image: url("../imgs/background.jpg");
+    font-family: "Press Start 2P", cursive;
+    font-size: 10px;
+    text-align: center;
+
+}
+
+
+.footeritems {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.footerText {
+    font-size: 8px;
+}
+
+/* --------------- */
+.container {
+    display: grid;
+
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas:
+        "menu"
+        "seccion-principal"
+        "pie-de-pagina";
+}
+
+/* Escritorio*/
+@media (min-width: 576px) {
+    .container {
+        grid-template-areas:
+            "menu seccion-principal"
+            "menu seccion-principal"
+            "pie-de-pagina seccion-principal";
+
+        grid-template-columns: 3fr 9fr;
+    }
+
+    .navIconH {
+        display: none;
+
+    }
+
+    .mainProductos {
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    }
+
+    .mainImg {
+        width: 45%;
+    }
+
+    .navItems {
+        padding-bottom: 20px;
+    }
+
+}
+
+/* Movil*/
+@media (max-width: 576px) {
+    .mainCard1 {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
